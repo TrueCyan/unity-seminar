@@ -4,13 +4,12 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private PlayerInput playerInput;
     [SerializeField] private float moveSpeed = 5f;
     private InputAction _moveAction;
 
     private void Awake()
     {
-        _moveAction = playerInput.actions["Move"];
+        _moveAction = InputSystem.actions["Move"];
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
